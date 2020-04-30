@@ -1,0 +1,43 @@
+.my-grid {
+  height: 100% !important;
+}
+.parent-row {
+  height: 82% !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.divider {
+  display: flex;
+
+  &:before,
+  &:after {
+    content: "";
+    flex: 1;
+  }
+}
+
+.line {
+  align-items: center;
+  margin: 1em -1em;
+  color: #cccccc;
+
+  &:before,
+  &:after {
+    height: 1px;
+    margin: 0 1em;
+  }
+}
+
+.one-line {
+  &:before,
+  &:after {
+    background: #cccccc;
+  }
+}
+
+.already {
+  display: block;
+  text-align: center;
+  padding-bottom: 10px;
+}

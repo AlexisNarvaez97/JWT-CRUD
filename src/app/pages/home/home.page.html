@@ -1,12 +1,12 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Home</ion-title>
-    <ion-buttons slot="start">
-      <ion-menu-button menu="main-menu"></ion-menu-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <ion-grid class="my-grid">
+    <ion-row class="parent-row">
+      <img src="../../../assets/undraw.svg" alt="">
+      <ion-col>
+        <ion-button [routerLink]="['/register']" expand="block" color="primary">Registrarse</ion-button>
+        <span class="divider line one-line">O</span>
+        <ion-button [routerLink]="['/login']" expand="block" color="success">Login</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
