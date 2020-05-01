@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient, private apiCrud: ApiService) { }
 
   ngOnInit() {
+    this.getBooks();
+  }
+
+  getBooks() {
+
+    this.apiCrud.getBooks().subscribe( resp => console.log(resp));
+
   }
 
 }
